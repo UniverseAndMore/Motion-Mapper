@@ -1,0 +1,966 @@
+{
+  "modes": {
+    "input": {
+      "worlds": [
+        {
+          "worldNum": 1,
+          "minX": 0,
+          "maxX": 10,
+          "time": 4,
+          "levelData": [
+            {
+              "levelNum": 1,
+              "targetWidth": 0.75,
+              "numSelectors": 0,
+              "targetGraphCoords": [
+                { "x": 0, "y": 2 },
+                { "x": 4, "y": 2 }
+              ]
+            },
+            {
+              "levelNum": 2,
+              "targetWidth": 0.75,
+              "numSelectors": 1,
+              "targetGraphCoords": [
+                { "x": 0, "y": 2 },
+                { "x": 2, "y": 2 },
+                { "x": 4, "y": 6 }
+              ]
+            },
+            {
+              "levelNum": 3,
+              "targetWidth": 0.75,
+              "numSelectors": 1,
+              "targetGraphCoords": [
+                { "x": 0, "y": 8 },
+                { "x": 4, "y": 0 }
+              ]
+            },
+            {
+              "levelNum": 4,
+              "targetWidth": 0.75,
+              "numSelectors": 1,
+              "targetGraphCoords": [
+                { "x": 0, "y": 0 },
+                { "x": 1, "y": 0 },
+                { "x": 4, "y": 9 }
+              ]
+            },
+            {
+              "levelNum": 5,
+              "targetWidth": 0.75,
+              "numSelectors": 2,
+              "targetGraphCoords": [
+                { "x": 0, "y": 10 },
+                { "x": 3, "y": 4 },
+                { "x": 4, "y": 4 }
+              ]
+            },
+            {
+              "levelNum": 6,
+              "targetWidth": 0.75,
+              "numSelectors": 2,
+              "targetGraphCoords": [
+                { "x": 0, "y": 4 },
+                { "x": 1, "y": 4 },
+                { "x": 2, "y": 0 },
+                { "x": 4, "y": 8 }
+              ]
+            },
+            {
+              "levelNum": 7,
+              "targetWidth": 0.75,
+              "numSelectors": 2,
+              "targetGraphCoords": [
+                { "x": 0, "y": -0 },
+                { "x": 2, "y": 10 },
+                { "x": 4, "y": 6 }
+              ]
+            },
+            {
+              "levelNum": 8,
+              "targetWidth": 0.75,
+              "numSelectors": 2,
+              "targetGraphCoords": [
+                { "x": 0, "y": 0 },
+                { "x": 2, "y": 8 },
+                { "x": 4, "y": 10 }
+              ]
+            },
+            {
+              "levelNum": 9,
+              "targetWidth": 0.75,
+              "numSelectors": 2,
+              "targetGraphCoords": [
+                { "x": 0, "y": 0 },
+                { "x": 1, "y": 0 },
+                { "x": 2, "y": 2 },
+                { "x": 4, "y": 8 }
+              ]
+            },
+            {
+              "levelNum": 10,
+              "targetWidth": 0.75,
+              "numSelectors": 2,
+              "targetGraphCoords": [
+                { "x": 0, "y": 10 },
+                { "x": 2, "y": 0 },
+                { "x": 4, "y": 10 }
+              ]
+            }
+          ]
+        },
+
+        {
+          "worldNum": 2,
+          "minX": 0,
+          "maxX": 10,
+          "time": 4,
+          "levelData": [
+            {
+              "levelNum": 1,
+              "targetWidth": 0.75,
+              "numSelectors": 0,
+              "targetGraphCoords": [
+                { "x": 0, "y": 0 },
+                { "x": 4, "y": 0 }
+              ]
+            },
+            {
+              "levelNum": 2,
+              "targetWidth": 0.75,
+              "numSelectors": 1,
+              "targetGraphCoords": [
+                { "x": 0, "y": 0 },
+                { "x": 1.98, "y": 0 },
+                { "x": 2.02, "y": 3 },
+                { "x": 4, "y": 3 }
+              ]
+            },
+            {
+              "levelNum": 3,
+              "targetWidth": 0.75,
+              "numSelectors": 1,
+              "targetGraphCoords": [
+                { "x": 0, "y": -2 },
+                { "x": 4, "y": -2 }
+              ]
+            },
+            {
+              "levelNum": 4,
+              "targetWidth": 0.75,
+              "numSelectors": 2,
+              "targetGraphCoords": [
+                { "x": 0, "y": 4 },
+                { "x": 1.98, "y": 4 },
+                { "x": 2.02, "y": -2 },
+                { "x": 4, "y": -2 }
+              ]
+            },
+            {
+              "levelNum": 5,
+              "targetWidth": 0.75,
+              "numSelectors": 2,
+              "targetGraphCoords": [
+                { "x": 0, "y": 0 },
+                { "x": 0.98, "y": 0 },
+                { "x": 1.02, "y": -2 },
+                { "x": 2.98, "y": -2 },
+                { "x": 3.02, "y": -4 },
+                { "x": 4, "y": -4 }
+              ]
+            },
+            {
+              "levelNum": 6,
+              "targetWidth": 0.75,
+              "numSelectors": 2,
+              "targetGraphCoords": [
+                { "x": 0, "y": 0 },
+                { "x": 0.98, "y": 0 },
+                { "x": 1.02, "y": 5 },
+                { "x": 2.98, "y": 5 },
+                { "x": 3.02, "y": 0 },
+                { "x": 4, "y": 0 }
+              ]
+            }
+          ]
+        },
+        {
+          "worldNum": 3,
+          "minX": 0,
+          "maxX": 10,
+          "time": 4,
+          "levelData": [
+            {
+              "levelNum": 1,
+              "targetWidth": 1,
+              "numSelectors": 1,
+              "targetGraphCoords": [
+                { "x": 0.0, "y": 0.0 },
+                { "x": 0.3, "y": 0.1 },
+                { "x": 0.6, "y": 0.21 },
+                { "x": 0.8, "y": 0.32 },
+                { "x": 1.0, "y": 0.5 },
+                { "x": 1.2, "y": 0.72 },
+                { "x": 1.4, "y": 0.98 },
+                { "x": 1.6, "y": 1.28 },
+                { "x": 1.8, "y": 1.62 },
+                { "x": 2.0, "y": 2.0 },
+                { "x": 2.2, "y": 2.42 },
+                { "x": 2.4, "y": 2.88 },
+                { "x": 2.6, "y": 3.38 },
+                { "x": 2.8, "y": 3.92 },
+                { "x": 3.0, "y": 4.5 },
+                { "x": 3.2, "y": 5.12 },
+                { "x": 3.4, "y": 5.78 },
+                { "x": 4.0, "y": 8.0 }
+              ]
+            },
+            {
+              "levelNum": 2,
+              "targetWidth": 1,
+              "numSelectors": 1,
+              "targetGraphCoords": [
+                { "x": 0.0, "y": 10.0 },
+                { "x": 1, "y": 10.0 },
+                { "x": 1.2, "y": 9.96 },
+                { "x": 1.4, "y": 9.84 },
+                { "x": 1.6, "y": 9.64 },
+                { "x": 1.8, "y": 9.36 },
+                { "x": 2.0, "y": 9.0 },
+                { "x": 2.2, "y": 8.56 },
+                { "x": 2.4, "y": 8.04 },
+                { "x": 2.6, "y": 7.44 },
+                { "x": 2.8, "y": 6.76 },
+                { "x": 3.0, "y": 6 },
+                { "x": 3.2, "y": 5.16 },
+                { "x": 3.4, "y": 4.24 },
+                { "x": 3.6, "y": 3.24 },
+                { "x": 4.0, "y": 1 }
+              ]
+            },
+            {
+              "levelNum": 3,
+              "targetWidth": 1,
+              "numSelectors": 2,
+              "targetGraphCoords": [
+                { "x": 0, "y": 1 },
+                { "x": 0.4, "y": 2.52 },
+                { "x": 0.6, "y": 3.22 },
+                { "x": 0.8, "y": 3.88 },
+                { "x": 1.0, "y": 4.5 },
+                { "x": 1.2, "y": 5.08 },
+                { "x": 1.4, "y": 5.62 },
+                { "x": 1.6, "y": 6.12 },
+                { "x": 1.8, "y": 6.58 },
+                { "x": 2.0, "y": 7 },
+                { "x": 2.2, "y": 7.38 },
+                { "x": 2.4, "y": 7.72 },
+                { "x": 2.6, "y": 8.02 },
+                { "x": 2.8, "y": 8.28 },
+                { "x": 3.0, "y": 8.5 },
+                { "x": 3.2, "y": 8.68 },
+                { "x": 3.4, "y": 8.82 },
+                { "x": 3.6, "y": 8.92 },
+                { "x": 3.8, "y": 8.98 },
+                { "x": 4, "y": 9 }
+              ]
+            },
+
+            {
+              "levelNum": 4,
+              "targetWidth": 1,
+              "numSelectors": 2,
+              "targetGraphCoords": [
+                { "x": 0.0, "y": 2.0 },
+
+                { "x": 0.4, "y": 4.16 },
+                { "x": 0.6, "y": 5.06 },
+                { "x": 0.8, "y": 5.84 },
+                { "x": 1.0, "y": 6.5 },
+                { "x": 1.2, "y": 7.04 },
+                { "x": 1.4, "y": 7.46 },
+                { "x": 1.6, "y": 7.76 },
+                { "x": 1.8, "y": 7.94 },
+                { "x": 2.0, "y": 8.0 },
+                { "x": 2.2, "y": 7.94 },
+                { "x": 2.4, "y": 7.76 },
+                { "x": 2.6, "y": 7.46 },
+                { "x": 2.8, "y": 7.04 },
+                { "x": 3.0, "y": 6.5 },
+                { "x": 3.2, "y": 5.84 },
+                { "x": 3.4, "y": 5.06 },
+                { "x": 3.6, "y": 4.16 },
+
+                { "x": 4.0, "y": 2.0 }
+              ]
+            },
+            {
+              "levelNum": 5,
+              "targetWidth": 1,
+              "numSelectors": 2,
+              "targetGraphCoords": [
+                { "x": 0.0, "y": 9.0 },
+                { "x": 0.2, "y": 8.22 },
+                { "x": 0.4, "y": 7.48 },
+                { "x": 0.6, "y": 6.78 },
+                { "x": 0.8, "y": 6.12 },
+                { "x": 1.0, "y": 5.5 },
+                { "x": 1.2, "y": 4.92 },
+                { "x": 1.4, "y": 4.38 },
+                { "x": 1.6, "y": 3.88 },
+                { "x": 1.8, "y": 3.42 },
+                { "x": 2.0, "y": 3.0 },
+                { "x": 2.2, "y": 2.62 },
+                { "x": 2.4, "y": 2.28 },
+                { "x": 2.6, "y": 1.98 },
+                { "x": 2.8, "y": 1.72 },
+                { "x": 3.0, "y": 1.5 },
+                { "x": 3.2, "y": 1.32 },
+                { "x": 3.4, "y": 1.18 },
+                { "x": 3.6, "y": 1.08 },
+                { "x": 3.8, "y": 1.02 },
+                { "x": 4.0, "y": 1.0 }
+              ]
+            },
+            {
+              "levelNum": 6,
+              "targetWidth": 0.88,
+              "numSelectors": 3,
+              "targetGraphCoords": [
+                { "x": 0.0, "y": 2.0 },
+                { "x": 0.4, "y": 2.1 },
+                { "x": 0.8, "y": 2.32 },
+                { "x": 1.2, "y": 2.72 },
+                { "x": 1.6, "y": 3.28 },
+                { "x": 2.0, "y": 4.0 },
+                { "x": 4.0, "y": 8.0 }
+              ]
+            },
+            {
+              "levelNum": 7,
+              "targetWidth": 1.2,
+              "numSelectors": 3,
+              "targetGraphCoords": [
+                { "x": 0.0, "y": 10.0 },
+                { "x": 1.0, "y": 5.0 },
+                { "x": 1.2, "y": 4.1 },
+                { "x": 1.4, "y": 3.4 },
+                { "x": 1.6, "y": 2.9 },
+                { "x": 1.8, "y": 2.6 },
+                { "x": 1.95, "y": 2.45 },
+                { "x": 2.05, "y": 2.45 },
+                { "x": 2.2, "y": 2.6 },
+                { "x": 2.4, "y": 2.9 },
+                { "x": 2.6, "y": 3.4 },
+                { "x": 2.8, "y": 4.1 },
+                { "x": 3.0, "y": 5.0 },
+                { "x": 4.0, "y": 10.0 }
+              ]
+            },
+            {
+              "levelNum": 8,
+              "targetWidth": 1.4,
+              "numSelectors": 3,
+              "targetGraphCoords": [
+                { "x": 0.0, "y": 1.0 },
+                { "x": 0.2, "y": 1.04 },
+                { "x": 0.4, "y": 1.16 },
+                { "x": 0.6, "y": 1.36 },
+                { "x": 0.8, "y": 1.64 },
+                { "x": 1.0, "y": 2.0 },
+                { "x": 1.2, "y": 2.44 },
+                { "x": 1.4, "y": 2.96 },
+                { "x": 1.6, "y": 3.56 },
+                { "x": 1.8, "y": 4.24 },
+                { "x": 2.0, "y": 5.0 },
+                { "x": 2.2, "y": 5.76 },
+                { "x": 2.4, "y": 6.44 },
+                { "x": 2.6, "y": 7.04 },
+                { "x": 2.8, "y": 7.56 },
+                { "x": 3.0, "y": 8.0 },
+                { "x": 3.2, "y": 8.36 },
+                { "x": 3.4, "y": 8.64 },
+                { "x": 3.6, "y": 8.84 },
+                { "x": 4.0, "y": 9.0 }
+              ]
+            },
+            {
+              "levelNum": 9,
+              "targetWidth": 1.2,
+              "numSelectors": 3,
+              "targetGraphCoords": [
+                { "x": 0.0, "y": 10.0 },
+                { "x": 2.0, "y": 2.0 },
+                { "x": 2.2, "y": 1.28 },
+                { "x": 2.4, "y": 0.72 },
+                { "x": 2.6, "y": 0.32 },
+                { "x": 2.8, "y": 0.08 },
+                { "x": 3.0, "y": 0.0 },
+                { "x": 4.0, "y": 0.0 }
+              ]
+            },
+            {
+              "levelNum": 10,
+              "targetWidth": 1.15,
+              "numSelectors": 3,
+              "targetGraphCoords": [
+                { "x": 0.0, "y": 5.0 },
+
+                { "x": 0.4, "y": 6.6 },
+                { "x": 0.6, "y": 7.1 },
+                { "x": 0.8, "y": 7.4 },
+                { "x": 1.0, "y": 7.5 },
+                { "x": 1.2, "y": 7.4 },
+                { "x": 1.4, "y": 7.1 },
+                { "x": 1.6, "y": 6.6 },
+                { "x": 1.8, "y": 5.9 },
+                { "x": 2.0, "y": 5.0 },
+                { "x": 2.2, "y": 4.1 },
+                { "x": 2.4, "y": 3.4 },
+                { "x": 2.6, "y": 2.9 },
+                { "x": 2.8, "y": 2.6 },
+                { "x": 3.0, "y": 2.5 },
+                { "x": 3.2, "y": 2.6 },
+                { "x": 3.4, "y": 2.9 },
+                { "x": 3.6, "y": 3.4 },
+
+                { "x": 4.0, "y": 5.0 }
+              ]
+            }
+          ]
+        },
+
+        {
+          "worldNum": 4,
+          "minX": 0,
+          "maxX": 10,
+          "time": 4,
+          "levelData": [
+            {
+              "levelNum": 1,
+              "targetWidth": 0.75,
+              "numSelectors": 1,
+              "targetGraphCoords": [
+                { "x": 0, "y": 0 },
+                { "x": 4, "y": 4 }
+              ]
+            },
+            {
+              "levelNum": 2,
+              "targetWidth": 0.75,
+              "numSelectors": 1,
+              "targetGraphCoords": [
+                { "x": 0, "y": 0 },
+                { "x": 2, "y": 0 },
+                { "x": 4, "y": -6 }
+              ]
+            },
+            {
+              "levelNum": 3,
+              "targetWidth": 0.75,
+              "numSelectors": 2,
+              "targetGraphCoords": [
+                { "x": 0, "y": 4 },
+                { "x": 4, "y": 0 }
+              ]
+            },
+            {
+              "levelNum": 4,
+              "targetWidth": 0.75,
+              "numSelectors": 2,
+              "targetGraphCoords": [
+                { "x": 0, "y": -4 },
+                { "x": 4, "y": 0 }
+              ]
+            },
+            {
+              "levelNum": 5,
+              "targetWidth": 0.75,
+              "numSelectors": 2,
+              "targetGraphCoords": [
+                { "x": 0, "y": 6 },
+                { "x": 4, "y": -6 }
+              ]
+            },
+            {
+              "levelNum": 6,
+              "targetWidth": 0.75,
+              "numSelectors": 3,
+              "targetGraphCoords": [
+                { "x": 0, "y": 0 },
+                { "x": 1, "y": -3 },
+                { "x": 4, "y": -3 }
+              ]
+            },
+            {
+              "levelNum": 7,
+              "targetWidth": 0.75,
+              "numSelectors": 3,
+              "targetGraphCoords": [
+                { "x": 0, "y": 0 },
+                { "x": 2, "y": 4 },
+                { "x": 4, "y": 0 }
+              ]
+            },
+            {
+              "levelNum": 8,
+              "targetWidth": 0.75,
+              "numSelectors": 3,
+              "targetGraphCoords": [
+                { "x": 0, "y": 4 },
+                { "x": 2, "y": 0 },
+                { "x": 4, "y": 4 }
+              ]
+            },
+            {
+              "levelNum": 9,
+              "targetWidth": 0.75,
+              "numSelectors": 3,
+              "targetGraphCoords": [
+                { "x": 0, "y": -4 },
+                { "x": 2, "y": 0 },
+                { "x": 4, "y": -4 }
+              ]
+            },
+            {
+              "levelNum": 10,
+              "targetWidth": 0.75,
+              "numSelectors": 3,
+              "targetGraphCoords": [
+                { "x": 0, "y": -5 },
+                { "x": 2, "y": 5 },
+                { "x": 4, "y": -5 }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+
+    "control": {
+      "worlds": [
+        {
+          "worldNum": 1,
+          "minX": 0,
+          "maxX": 10,
+          "time": 3,
+          "levelData": [
+            {
+              "levelNum": 1,
+              "targetWidth": 1,
+              "targetGraphCoords": [
+                { "x": 0, "y": 2 },
+                { "x": 3, "y": 2 }
+              ]
+            },
+            {
+              "levelNum": 2,
+              "targetWidth": 1,
+              "targetGraphCoords": [
+                { "x": 0, "y": 2 },
+                { "x": 1.25, "y": 2 },
+                { "x": 1.75, "y": 4 },
+                { "x": 3, "y": 4 }
+              ]
+            },
+            {
+              "levelNum": 3,
+              "targetWidth": 1,
+              "targetGraphCoords": [
+                { "x": 0, "y": 4 },
+                { "x": 1, "y": 4 },
+                { "x": 2, "y": 8 },
+                { "x": 3, "y": 8 }
+              ]
+            },
+            {
+              "levelNum": 4,
+              "targetWidth": 1,
+              "targetGraphCoords": [
+                { "x": 0, "y": 8 },
+                { "x": 0.5, "y": 8 },
+                { "x": 1, "y": 4 },
+                { "x": 2, "y": 4 },
+                { "x": 2.5, "y": 8 },
+                { "x": 3, "y": 8 }
+              ]
+            },
+            {
+              "levelNum": 5,
+              "targetWidth": 1,
+              "targetGraphCoords": [
+                { "x": 0, "y": 8 },
+                { "x": 0.5, "y": 8 },
+                { "x": 1, "y": 6 },
+                { "x": 1.5, "y": 6 },
+                { "x": 2, "y": 4 },
+                { "x": 2.5, "y": 4 },
+                { "x": 3, "y": 2 }
+              ]
+            },
+            {
+              "levelNum": 6,
+              "targetWidth": 1,
+              "targetGraphCoords": [
+                { "x": 0, "y": 2 },
+                { "x": 0.2, "y": 2 },
+                { "x": 1, "y": 6 },
+                { "x": 2, "y": 6 },
+                { "x": 2.8, "y": 2 },
+                { "x": 3, "y": 2 }
+              ]
+            },
+            {
+              "levelNum": 7,
+              "targetWidth": 1,
+              "targetGraphCoords": [
+                { "x": 0, "y": 6 },
+                { "x": 0.8, "y": 2 },
+                { "x": 1.2, "y": 2 },
+                { "x": 2, "y": 6 },
+                { "x": 2.4, "y": 6 },
+                { "x": 3, "y": 2 }
+              ]
+            },
+            {
+              "levelNum": 8,
+              "targetWidth": 1,
+              "targetGraphCoords": [
+                { "x": 0, "y": 2 },
+                { "x": 0.5, "y": 2 },
+                { "x": 1, "y": 4 },
+                { "x": 1.5, "y": 4 },
+                { "x": 2, "y": 6 },
+                { "x": 2.5, "y": 6 },
+                { "x": 3, "y": 8 }
+              ]
+            },
+            {
+              "levelNum": 9,
+              "targetWidth": 1,
+              "targetGraphCoords": [
+                { "x": 0, "y": 10 },
+                { "x": 0.2, "y": 10 },
+                { "x": 1, "y": 5 },
+                { "x": 2, "y": 5 },
+                { "x": 2.8, "y": 0 },
+                { "x": 3, "y": 0 }
+              ]
+            },
+            {
+              "levelNum": 10,
+              "targetWidth": 1,
+              "targetGraphCoords": [
+                { "x": 0, "y": 1 },
+                { "x": 0.5, "y": 1 },
+                { "x": 1, "y": 6.5 },
+                { "x": 1.5, "y": 4 },
+                { "x": 2, "y": 6.5 },
+                { "x": 2.5, "y": 1 },
+                { "x": 3, "y": 1 }
+              ]
+            }
+          ]
+        },
+
+        {
+          "worldNum": 2,
+          "minX": 0,
+          "maxX": 10,
+          "time": 2,
+          "levelData": [
+            {
+              "levelNum": 1,
+              "targetWidth": 1,
+              "targetGraphCoords": [
+                { "x": 0, "y": 0 },
+                { "x": 2, "y": 0 }
+              ]
+            },
+            {
+              "levelNum": 2,
+              "targetWidth": 1,
+              "targetGraphCoords": [
+                { "x": 0, "y": 2 },
+                { "x": 2, "y": 2 }
+              ]
+            },
+            {
+              "levelNum": 3,
+              "targetWidth": 1,
+              "targetGraphCoords": [
+                { "x": 0, "y": -3 },
+                { "x": 2, "y": -3 }
+              ]
+            },
+            {
+              "levelNum": 4,
+              "targetWidth": 1.6,
+              "targetGraphCoords": [
+                { "x": 0, "y": 0 },
+                { "x": 0.98, "y": 0 },
+                { "x": 1.02, "y": 4 },
+                { "x": 2, "y": 4 }
+              ]
+            },
+            {
+              "levelNum": 5,
+              "targetWidth": 1.6,
+              "targetGraphCoords": [
+                { "x": 0, "y": 0 },
+                { "x": 0.98, "y": 0 },
+                { "x": 1.02, "y": -4 },
+                { "x": 2, "y": -4 }
+              ]
+            },
+            {
+              "levelNum": 6,
+              "targetWidth": 1.5,
+              "targetGraphCoords": [
+                { "x": 0, "y": 5 },
+                { "x": 0.98, "y": 5 },
+                { "x": 1.02, "y": -3 },
+                { "x": 2, "y": -3 }
+              ]
+            },
+            {
+              "levelNum": 7,
+              "targetWidth": 1.5,
+              "targetGraphCoords": [
+                { "x": 0, "y": -4 },
+                { "x": 1.49, "y": -4 },
+                { "x": 1.52, "y": 2 },
+                { "x": 2, "y": 2 }
+              ]
+            },
+            {
+              "levelNum": 8,
+              "targetWidth": 1.5,
+              "targetGraphCoords": [
+                { "x": 0, "y": -4 },
+                { "x": 0.49, "y": -4 },
+                { "x": 0.52, "y": 2 },
+                { "x": 2, "y": 2 }
+              ]
+            }
+          ]
+        },
+        {
+          "worldNum": 3,
+          "minX": 0,
+          "maxX": 10,
+          "time": 3,
+          "levelData": [
+            {
+              "levelNum": 1,
+              "targetWidth": 1,
+              "targetGraphCoords": [
+                { "x": 0, "y": 4 },
+                { "x": 3, "y": 4 }
+              ]
+            },
+            {
+              "levelNum": 2,
+              "targetWidth": 1,
+              "targetGraphCoords": [
+                { "x": 0, "y": 4 },
+                { "x": 1.25, "y": 4 },
+                { "x": 1.75, "y": 2 },
+                { "x": 3, "y": 2 }
+              ]
+            },
+            {
+              "levelNum": 3,
+              "targetWidth": 1,
+              "targetGraphCoords": [
+                { "x": 0, "y": 2 },
+                { "x": 1, "y": 2 },
+                { "x": 2, "y": 8 },
+                { "x": 3, "y": 8 }
+              ]
+            },
+            {
+              "levelNum": 4,
+              "targetWidth": 1,
+              "targetGraphCoords": [
+                { "x": 0, "y": 8 },
+                { "x": 0.5, "y": 8 },
+                { "x": 1, "y": 4 },
+                { "x": 2, "y": 4 },
+                { "x": 2.5, "y": 8 },
+                { "x": 3, "y": 8 }
+              ]
+            },
+            {
+              "levelNum": 5,
+              "targetWidth": 1,
+              "targetGraphCoords": [
+                { "x": 0, "y": 8 },
+                { "x": 0.5, "y": 8 },
+                { "x": 1, "y": 6 },
+                { "x": 1.5, "y": 6 },
+                { "x": 2, "y": 4 },
+                { "x": 2.5, "y": 4 },
+                { "x": 3, "y": 2 }
+              ]
+            },
+            {
+              "levelNum": 6,
+              "targetWidth": 1,
+              "targetGraphCoords": [
+                { "x": 0, "y": 2 },
+                { "x": 0.2, "y": 2 },
+                { "x": 1, "y": 6 },
+                { "x": 2, "y": 6 },
+                { "x": 2.8, "y": 2 },
+                { "x": 3, "y": 2 }
+              ]
+            },
+            {
+              "levelNum": 7,
+              "targetWidth": 1,
+              "targetGraphCoords": [
+                { "x": 0, "y": 6 },
+                { "x": 0.8, "y": 2 },
+                { "x": 1.2, "y": 2 },
+                { "x": 2, "y": 6 },
+                { "x": 2.4, "y": 6 },
+                { "x": 3, "y": 2 }
+              ]
+            },
+            {
+              "levelNum": 8,
+              "targetWidth": 1,
+              "targetGraphCoords": [
+                { "x": 0, "y": 0 },
+                { "x": 0.2, "y": 0 },
+                { "x": 1, "y": 5 },
+                { "x": 2, "y": 5 },
+                { "x": 2.8, "y": 10 },
+                { "x": 3, "y": 10 }
+              ]
+            },
+            {
+              "levelNum": 9,
+              "targetWidth": 0.5,
+              "targetGraphCoords": [
+                { "x": 0, "y": 10 },
+                { "x": 1.45, "y": 10 },
+                { "x": 1.65, "y": 9.8 },
+                { "x": 1.85, "y": 9.5 },
+                { "x": 2.15, "y": 8 },
+                { "x": 2.65, "y": 4 },
+                { "x": 3, "y": 0 }
+              ]
+            },
+            {
+              "levelNum": 10,
+              "targetWidth": 0.5,
+              "targetGraphCoords": [
+                { "x": 0, "y": 10 },
+                { "x": 0.3, "y": 10 },
+                { "x": 0.5, "y": 9.8 },
+                { "x": 0.7, "y": 9.5 },
+                { "x": 1, "y": 8 },
+                { "x": 1.5, "y": 4 },
+                { "x": 1.85, "y": 0 },
+                { "x": 2.2, "y": 3 },
+                { "x": 2.5, "y": 4.5 },
+                { "x": 2.8, "y": 5.5 },
+                { "x": 3.05, "y": 5.5 }
+              ]
+            }
+          ]
+        },
+        {
+          "worldNum": 4,
+          "minX": 0,
+          "maxX": 10,
+          "time": 2,
+          "levelData": [
+            {
+              "levelNum": 1,
+              "targetWidth": 1,
+              "targetGraphCoords": [
+                { "x": 0, "y": 0 },
+                { "x": 2, "y": 0 }
+              ]
+            },
+            {
+              "levelNum": 2,
+              "targetWidth": 1,
+              "targetGraphCoords": [
+                { "x": 0, "y": 0 },
+                { "x": 1, "y": 0 },
+                { "x": 2, "y": -5 }
+              ]
+            },
+            {
+              "levelNum": 3,
+              "targetWidth": 1,
+              "targetGraphCoords": [
+                { "x": 0, "y": 0 },
+                { "x": 0.5, "y": 0 },
+                { "x": 1.49, "y": -5 },
+                { "x": 1.51, "y": 5 },
+                { "x": 2, "y": 2.5 }
+              ]
+            },
+            {
+              "levelNum": 4,
+              "targetWidth": 1.35,
+              "targetGraphCoords": [
+                { "x": 0, "y": 0 },
+                { "x": 0.99, "y": -5 },
+                { "x": 1.01, "y": 5 },
+                { "x": 2, "y": 0 }
+              ]
+            },
+            {
+              "levelNum": 5,
+              "targetWidth": 1.35,
+              "targetGraphCoords": [
+                { "x": 0, "y": 0 },
+                { "x": 1.49, "y": -7.5 },
+                { "x": 1.51, "y": 6.5 },
+                { "x": 2, "y": 4 }
+              ]
+            },
+            {
+              "levelNum": 6,
+              "targetWidth": 1,
+              "targetGraphCoords": [
+                { "x": 0, "y": 0 },
+                { "x": 0.99, "y": -5 },
+                { "x": 1.01, "y": 0 },
+                { "x": 2, "y": 0 }
+              ]
+            },
+            {
+              "levelNum": 7,
+              "targetWidth": 1.75,
+              "targetGraphCoords": [
+                { "x": 0, "y": 5 },
+                { "x": 2, "y": -5 }
+              ]
+            },
+            {
+              "levelNum": 8,
+              "targetWidth": 1,
+              "targetGraphCoords": [
+                { "x": 0, "y": 0 },
+                { "x": 0.99, "y": -5 },
+                { "x": 1.01, "y": 0 },
+                { "x": 1.5, "y": 0 },
+                { "x": 2, "y": -2.5 }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+
+  "aboutText": "Motion Mapper was created by Matthew Blackman, physics teacher\nat Ridge High School, NJ. \n\nCheck out www.UniverseAndMore.com\nfor more resources!"
+}

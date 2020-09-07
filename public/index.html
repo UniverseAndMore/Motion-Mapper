@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+
+    <title>Motion Mapper</title>
+
+    <!-- Update your html tag to include the itemscope and itemtype attributes. -->
+    <!-- Place this data between the <head> tags of your website -->
+    <meta
+      name="description"
+      content="A physics motion graphing app for learning about position, velocity and acceleration!"
+    />
+
+    <meta
+      name="keywords"
+      content="motion graphing, graphing app, motion graphing, kinematics app, physics education, educational science games, graphing games, educational science games, kinematics graphing app, graphing challenge, action graphing, kinematics simulation, motion graphing, motion graphs"
+    />
+
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@UniverseAndMore" />
+    <meta name="twitter:title" content="Motion Mapper" />
+    <meta
+      name="twitter:description"
+      content="A physics graphing game for learning position, velocity and acceleration!"
+    />
+    <meta name="twitter:creator" content="@UniverseAndMore" />
+    <!-- Twitter summary card with large image must be at least 280x150px -->
+    <meta
+      name="twitter:image:src"
+      content="https://universeandmore.com/social-content/cards/motion-mapper.png"
+    />
+
+    <!-- Open Graph data -->
+    <meta property="og:title" content="Universe and More - Motion Mapper" />
+    <!-- <meta property="og:type" content="educational app" /> -->
+    <meta
+      property="og:url"
+      content="https://universeandmore.com/motion-mapper"
+    />
+    <meta
+      property="og:image"
+      content="https://universeandmore.com/social-content/cards/motion-mapper.png"
+    />
+    <meta
+      property="og:description"
+      content="A physics graphing game for learning position, velocity and acceleration!"
+    />
+    <meta property="og:site_name" content="Universe and More - Motion Mapper" />
+    <!-- <meta
+      property="article:published_time"
+      content="2013-09-17T05:59:00+01:00"
+    />
+    <meta
+      property="article:modified_time"
+      content="2013-09-16T19:08:47+01:00"
+    />
+    <meta property="article:section" content="Article Section" />
+    <meta property="article:tag" content="Article Tag" />
+    <meta property="fb:admins" content="Facebook numberic ID" /> -->
+
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg" />
+    <link rel="alternate icon" href="assets/images/favicon.ico" />
+
+    <script src="phaser-app/js/phaser.min.js"></script>
+    <script src="phaser-app/js/main.js"></script>
+    <script src="phaser-app/js/constants.js"></script>
+    <script src="phaser-app/js/classes/mc/model.js"></script>
+    <script src="phaser-app/js/classes/mc/controller.js"></script>
+    <script src="phaser-app/js/classes/utils/mediaManager.js"></script>
+    <script src="phaser-app/js/classes/utils/align.js"></script>
+    <script src="phaser-app/js/scenes/sceneMenu.js"></script>
+    <script src="phaser-app/js/scenes/sceneMain.js"></script>
+    <script src="phaser-app/js/classes/components/headerBar.js"></script>
+    <script src="phaser-app/js/classes/components/controlBar.js"></script>
+    <script src="phaser-app/js/classes/components/selectorPanel.js"></script>
+    <script src="phaser-app/js/classes/components/uiButton.js"></script>
+    <script src="phaser-app/js/classes/components/vector.js"></script>
+    <script src="phaser-app/js/classes/components/settingsMenu.js"></script>
+    <script src="phaser-app/js/classes/components/sliderBar.js"></script>
+    <script src="phaser-app/js/classes/graph.js"></script>
+    <script src="phaser-app/js/classes/boxGuy.js"></script>
+    <script src="phaser-app/js/classes/positionAxisArea.js"></script>
+    <script src="phaser-app/js/classes/progressBar.js"></script>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+      integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+
+  <body>
+    <img
+      src="./assets/images/header-stars.svg"
+      alt="stars"
+      class="header-stars"
+    />
+    <a
+      href="https://www.universeandmore.com"
+      alt="Link to Universe & More homepage"
+    >
+      <div class="home-button"><i class="fas fa-home"></i></div
+    ></a>
+    <a
+      href="https://www.universeandmore.com/motion-mapper-es"
+      alt="Motion Mapper en Español"
+    >
+      <div class="es-button">Español</div></a
+    >
+    <a
+      href="https://www.universeandmore.com/motion-mapper-fr"
+      alt="Motion Mapper en Français"
+    >
+      <div class="fr-button">Français</div></a
+    >
+    <div class="page-header">
+      <a href="https://www.universeandmore.com"
+        ><img
+          src="./assets/images/UMLogoFull.svg"
+          alt="Universe & More"
+          class="header-img"
+      /></a>
+    </div>
+    <img
+      src="./assets/images/motion-mapper-title.svg"
+      alt="Motion Mapper"
+      class="title-img"
+    />
+    <div id="game-section">
+      <img
+        src="./assets/images/game-border.svg"
+        alt="game border"
+        class="game-border game-border-top"
+      />
+      <div id="game-container">
+        <div id="phaser-game"></div>
+        <div alt="go full screen" id="fullscreen-btn">Full screen</div>
+      </div>
+      <div class="bar-bot"></div>
+      <div class="footer">
+        <div class="footer-bg">
+          <img
+            src="./assets/images/footer-img.svg"
+            alt="footer-image"
+            class="footer-image"
+          />
+          <div class="copyright">
+            <p>
+              &copy;
+              <script>
+                document.write(new Date().getFullYear());
+              </script>
+              &nbsp;Universe & More, All Rights Reserved.&nbsp;
+            </p>
+            <p class="copyright-line-2">
+              Website and app created by Matthew Blackman
+            </p>
+          </div>
+        </div>
+        <div class="footer-content">
+          <div class="footer-links">
+            <a href="https://www.universeandmore.com" alt="Home"> Home </a>
+            |
+            <a
+              href="https://www.universeandmore.com/video-vault"
+              alt="Video Vault"
+            >
+              Video Vault
+            </a>
+            |
+            <a href="https://www.universeandmore.com/about" alt="Video Vault">
+              About Us
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
