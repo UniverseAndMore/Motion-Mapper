@@ -16,7 +16,7 @@ class UIButton extends Phaser.GameObjects.Container {
     this.key = config.key;
     this.toggle = config.toggle ? true : false;
     const imgPath = this.toggle ? config.key + "-on" : config.key;
-    this.back = this.scene.add.image(0, 0, imgPath);
+    this.back = this.scene.add.image(0, 0, "menuSprites", imgPath);
     this.back.setOrigin(0.5, 0.5);
     this.add(this.back);
 
@@ -92,7 +92,7 @@ class UIButton extends Phaser.GameObjects.Container {
   }
 
   setBtnTexture(texture) {
-    this.back.setTexture(texture);
+    this.back.setTexture("menuSprites", texture);
   }
 
   getWidth() {
@@ -137,12 +137,12 @@ class UIButton extends Phaser.GameObjects.Container {
 
     if (this.toggle) {
       if (this.toggleState) {
-        this.back.setTexture(this.key + "-off");
+        this.back.setTexture("menuSprites", this.key + "-off");
       } else {
-        this.back.setTexture(this.key + "-on");
+        this.back.setTexture("menuSprites", this.key + "-on");
       }
+      this.toggleState = !this.toggleState;
     }
-    this.toggleState = !this.toggleState;
   }
 
   pressedMobile(e) {
@@ -153,6 +153,26 @@ class UIButton extends Phaser.GameObjects.Container {
       emitter.emit(this.config.event);
     }
 
+    if (this.toggle) {
+      if (this.toggleState) {
+        this.back.setTexture("menuSprites", this.key + "-off");
+      } else {
+        this.back.setTexture("menuSprites", this.key + "-on");
+      }
+      this.toggleState = !this.toggleState;
+    }
+
     emitter.emit(G.PLAY_SOUND, "button-up", 0.2);
   }
 }
+
+UIButton.prototype.toggleBtn = function () {
+  if (this.toggle) {
+    if (this.toggleState) {
+      this.back.setTexture("menuSprites", this.key + "-off");
+    } else {
+      this.back.setTexture("menuSprites", this.key + "-on");
+    }
+  }
+  this.toggleState = !this.toggleState;
+};

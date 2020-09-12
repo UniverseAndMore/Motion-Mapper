@@ -17,8 +17,6 @@ class SettingsMenu extends Phaser.GameObjects.Container {
 
     //   this.level = config.levNum;
 
-    console.log(this.mode);
-
     this.drawBackground();
     this.createTimeSlider();
     //   this.createLevelHeading();

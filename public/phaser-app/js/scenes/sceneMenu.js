@@ -61,87 +61,101 @@ class SceneMenu extends Phaser.Scene {
       });
     }
 
-    this.load.svg(
-      "horizontal",
-      "phaser-app/assets/images/menuScene-images/horizontal.svg",
-      { scale: this.svgScale }
-    );
-    this.load.svg(
-      "about",
-      "phaser-app/assets/images/menuScene-images/about.svg",
-      { scale: this.svgScale }
-    );
-    this.load.image(
-      "position-vs-time",
-      "phaser-app/assets/images/menuScene-images/position-vs-time.png"
-    );
-    this.load.image(
-      "velocity-vs-time",
-      "phaser-app/assets/images/menuScene-images/velocity-vs-time.png"
-    );
+    this.load.audio("button-down", "phaser-app/assets/sounds/button-down.mp3");
+    this.load.audio("button-up", "phaser-app/assets/sounds/button-up.mp3");
+    this.load.json("level-data", "phaser-app/data/gameData.json");
+    this.load.path = "phaser-app/assets/spritesheets/";
+    this.load.atlas("menuSprites", "menuSprites.png", "menuSprites.json");
+
+    // this.load.svg(
+    //   "horizontal",
+    //   "phaser-app/assets/images/menuScene-images/horizontal.svg",
+    //   { scale: this.svgScale }
+    // );
+    // this.load.svg(
+    //   "about",
+    //   "phaser-app/assets/images/menuScene-images/about.svg",
+    //   { scale: this.svgScale }
+    // );
+    // this.load.image(
+    //   "position-vs-time",
+    //   "phaser-app/assets/images/menuScene-images/position-vs-time.png"
+    // );
+    // this.load.image(
+    //   "velocity-vs-time",
+    //   "phaser-app/assets/images/menuScene-images/velocity-vs-time.png"
+    // );
+
+    // this.load.image(
+    //   "clipboard",
+    //   "phaser-app/assets/images/menuScene-images/clipboard.png"
+    // );
+
+    // this.load.spritesheet(
+    //   "loading-ring",
+    //   "phaser-app/assets/images/loading-ring-spritesheet.png",
+    //   { frameWidth: 120, frameHeight: 120 }
+    // );
+
     // this.load.image(
     //   "sandbox",
     //   "phaser-app/assets/images/menuScene-images/sandbox.png"
     // );
-    this.load.svg(
-      "target-icon",
-      "phaser-app/assets/images/menuScene-images/target-icon.svg"
-    );
-    this.load.svg(
-      "target-icon-highlighted",
-      "phaser-app/assets/images/menuScene-images/target-icon-highlighted.svg"
-    );
-    this.load.svg(
-      "vertical",
-      "phaser-app/assets/images/menuScene-images/vertical.svg",
-      { scale: this.svgScale }
-    );
-    this.load.image("icon-sfx-on", "phaser-app/assets/images/icon-sfx-on.png");
-    this.load.image(
-      "icon-sfx-off",
-      "phaser-app/assets/images/icon-sfx-off.png"
-    );
+    // this.load.svg(
+    //   "target-icon",
+    //   "phaser-app/assets/images/menuScene-images/target-icon.svg"
+    // );
+    // this.load.svg(
+    //   "target-icon-highlighted",
+    //   "phaser-app/assets/images/menuScene-images/target-icon-highlighted.svg"
+    // );
+    // this.load.svg(
+    //   "vertical",
+    //   "phaser-app/assets/images/menuScene-images/vertical.svg",
+    //   { scale: this.svgScale }
+    // );
+    // this.load.image("icon-sfx-on", "phaser-app/assets/images/icon-sfx-on.png");
+    // this.load.image(
+    //   "icon-sfx-off",
+    //   "phaser-app/assets/images/icon-sfx-off.png"
+    // );
 
-    this.load.svg(
-      "control-mode-on",
-      "phaser-app/assets/images/menuScene-images/control-mode-on.svg",
-      { scale: this.svgScale }
-    );
-    this.load.svg(
-      "control-mode-off",
-      "phaser-app/assets/images/menuScene-images/control-mode-off.svg",
-      { scale: this.svgScale }
-    );
-    this.load.svg(
-      "input-mode-on",
-      "phaser-app/assets/images/menuScene-images/input-mode-on.svg",
-      { scale: this.svgScale }
-    );
+    // this.load.svg(
+    //   "control-mode-on",
+    //   "phaser-app/assets/images/menuScene-images/control-mode-on.svg",
+    //   { scale: this.svgScale }
+    // );
+    // this.load.svg(
+    //   "control-mode-off",
+    //   "phaser-app/assets/images/menuScene-images/control-mode-off.svg",
+    //   { scale: this.svgScale }
+    // );
+    // this.load.svg(
+    //   "input-mode-on",
+    //   "phaser-app/assets/images/menuScene-images/input-mode-on.svg",
+    //   { scale: this.svgScale }
+    // );
 
-    this.load.svg(
-      "input-mode-off",
-      "phaser-app/assets/images/menuScene-images/input-mode-off.svg",
-      { scale: this.svgScale }
-    );
+    // this.load.svg(
+    //   "input-mode-off",
+    //   "phaser-app/assets/images/menuScene-images/input-mode-off.svg",
+    //   { scale: this.svgScale }
+    // );
 
-    this.load.svg(
-      "set-velocity",
-      "phaser-app/assets/images/menuScene-images/set-velocity.svg",
-      { scale: this.svgScale }
-    );
+    // this.load.svg(
+    //   "set-velocity",
+    //   "phaser-app/assets/images/menuScene-images/set-velocity.svg",
+    //   { scale: this.svgScale }
+    // );
 
-    this.load.svg(
-      "set-acceleration",
-      "phaser-app/assets/images/menuScene-images/set-acceleration.svg",
-      { scale: this.svgScale }
-    );
+    // this.load.svg(
+    //   "set-acceleration",
+    //   "phaser-app/assets/images/menuScene-images/set-acceleration.svg",
+    //   { scale: this.svgScale }
+    // );
 
     //////AUDIO
     // this.load.audio("bg-music", "phaser-app/assets/sounds/bg-music.mp3");
-    this.load.audio("button-down", "phaser-app/assets/sounds/button-down.mp3");
-    this.load.audio("button-up", "phaser-app/assets/sounds/button-up.mp3");
-
-    this.load.json("level-data", "phaser-app/data/gameData.json");
   }
 
   create() {
@@ -186,15 +200,15 @@ class SceneMenu extends Phaser.Scene {
   createElements() {
     const modeHeadingPath =
       model.mode === "control" ? "control-mode-off" : "input-mode-off";
-    this.modeHeading = this.add.image(0, 0, modeHeadingPath);
+    this.modeHeading = this.add.image(0, 0, "menuSprites", modeHeadingPath);
 
     const heading1Path =
       model.mode === "control" ? "horizontal" : "set-velocity";
     const heading2Path =
       model.mode === "control" ? "vertical" : "set-acceleration";
 
-    this.heading1 = this.add.image(0, 0, heading1Path);
-    this.heading2 = this.add.image(0, 0, heading2Path);
+    this.heading1 = this.add.image(0, 0, "menuSprites", heading1Path);
+    this.heading2 = this.add.image(0, 0, "menuSprites", heading2Path);
 
     this.posBtn1 = new UIButton({
       scene: this,
@@ -249,10 +263,15 @@ class SceneMenu extends Phaser.Scene {
       this.progressInfo.push(textLabel);
       textLabel.scale = this.cameras.main.width / 1000;
       this.targetIcons.push(
-        this.add.image(0, 0, "target-icon").setScale(0.7 / this.svgScale)
+        this.add
+          .image(0, 0, "menuSprites", "target-icon")
+          .setScale(0.85 / this.svgScale)
       );
       if (numLevelsInWorld === model.numLevelsBeatenForWorld(i + 1)) {
-        this.targetIcons[i].setTexture("target-icon-highlighted");
+        this.targetIcons[i].setTexture(
+          "menuSprites",
+          "target-icon-highlighted"
+        );
       }
     }
 
@@ -278,22 +297,37 @@ class SceneMenu extends Phaser.Scene {
       params: "input",
     });
 
-    this.about = new UIButton({
-      scene: this,
-      key: "about",
-      event: "show_about",
-    });
-    this.about.setOrigin(1, 1);
+    // this.about = new UIButton({
+    //   scene: this,
+    //   key: "about",
+    //   event: "show_about",
+    // });
+    // this.about.setOrigin(1, 1);
 
-    this.about.setVisible(false);
+    // this.about.setVisible(false);
 
     this.sfx = new UIButton({
       scene: this,
       key: "icon-sfx",
-      event: "toggle_music",
+      event: "toggle_sfx",
       toggle: true,
     });
-    this.sfx.setOrigin(0, 1);
+    this.sfx.setOrigin(0, 0);
+
+    if (!model.soundOn) {
+      this.sfx.toggleBtn();
+    }
+
+    this.progressBtn = new UIButton({
+      scene: this,
+      key: "clipboard",
+      event: "open_progress",
+      toggle: false,
+    });
+    this.progressBtn.setOrigin(0, 0);
+
+    this.progressReport = null;
+    emitter.on("open_progress", this.openProgressReport, this);
   }
 
   setLayoutConstants() {
@@ -403,12 +437,21 @@ class SceneMenu extends Phaser.Scene {
     this.inputModeBtn.y = this.modeBtnY;
     this.inputModeBtn.scaleY = this.inputModeBtn.scaleX;
 
-    this.sfx.x = 0.04 * game.config.width;
-    this.sfx.y = 0.965 * game.config.height;
+    this.sfx.x = 0.025 * game.config.width;
+    this.sfx.y = 0.035 * game.config.height;
     this.sfx.scale = this.bottomBtnScale;
-    this.about.x = 0.965 * game.config.width;
-    this.about.y = 0.96 * game.config.height;
-    this.about.scale = this.bottomBtnScale / 1.2;
+
+    this.progressBtn.scale = 0.85 * this.bottomBtnScale;
+
+    if (this.isLandscape) {
+      this.progressBtn.x =
+        game.config.width - 1.6 * this.progressBtn.getWidth();
+      this.progressBtn.y = 0.3 * this.progressBtn.getHeight();
+    } else {
+      this.progressBtn.x =
+        game.config.width - 1.4 * this.progressBtn.getWidth();
+      this.progressBtn.y = 0.4 * this.progressBtn.getHeight();
+    }
   }
 
   positionAndScaleLevelInfo() {
@@ -442,15 +485,15 @@ class SceneMenu extends Phaser.Scene {
     model.mode = newMode;
 
     if (newMode === "control") {
-      this.modeHeading.setTexture("control-mode-off");
-      this.heading1.setTexture("horizontal");
-      this.heading2.setTexture("vertical");
+      this.modeHeading.setTexture("menuSprites", "control-mode-off");
+      this.heading1.setTexture("menuSprites", "horizontal");
+      this.heading2.setTexture("menuSprites", "vertical");
       this.controlModeBtn.setBtnTexture("control-mode-on");
       this.inputModeBtn.setBtnTexture("input-mode-off");
     } else {
-      this.modeHeading.setTexture("input-mode-off");
-      this.heading1.setTexture("set-velocity");
-      this.heading2.setTexture("set-acceleration");
+      this.modeHeading.setTexture("menuSprites", "input-mode-off");
+      this.heading1.setTexture("menuSprites", "set-velocity");
+      this.heading2.setTexture("menuSprites", "set-acceleration");
       this.controlModeBtn.setBtnTexture("control-mode-off");
       this.inputModeBtn.setBtnTexture("input-mode-on");
     }
@@ -469,8 +512,11 @@ class SceneMenu extends Phaser.Scene {
         model.numLevelsBeatenForWorld(i + 1) + "/" + numLevelsInWorld
       );
       if (numLevelsInWorld === model.numLevelsBeatenForWorld(i + 1)) {
-        this.targetIcons[i].setTexture("target-icon-highlighted");
-      } else this.targetIcons[i].setTexture("target-icon");
+        this.targetIcons[i].setTexture(
+          "menuSprites",
+          "target-icon-highlighted"
+        );
+      } else this.targetIcons[i].setTexture("menuSprites", "target-icon");
     }
 
     this.positionAndScaleLevelInfo();
@@ -493,12 +539,76 @@ class SceneMenu extends Phaser.Scene {
     this.scene.start("SceneMain");
   }
 
+  openProgressReport() {
+    // if (this.progressReport === null) {
+    //   this.progressReport = new ProgressReport({
+    //     scene: this,
+    //     emitter: emitter,
+    //     width: game.config.width,
+    //     height: game.config.height,
+    //     portraitMode: this.isPortrait,
+    //   });
+    //   this.add(this.progressReport);
+    //   this.progressReport.y = -0.2 * game.config.height;
+    // }
+  }
+
+  toggleProgressReport() {
+    if (this.progressReportAnimating) return;
+    this.progressReportAnimating = true;
+    if (!this.progressReportShowing) {
+      this.showProgressReport();
+    } else this.hideProgressReport();
+  }
+
+  showProgressReport() {
+    // this.emitter.emit(G.PAUSE_GAME);
+    this.progressReport.setVisible(true);
+    this.scene.tweens.add({
+      targets: this.progressReport,
+      paused: false,
+      duration: 200,
+      ease: "Quad.easeOut",
+      onComplete: this.progressReportEntered.bind(this),
+      y: 0,
+    });
+
+    this.progressReportAnimating = true;
+  }
+
+  hideProgressReport() {
+    this.scene.tweens.add({
+      targets: this.progressReport,
+      paused: false,
+      duration: 300,
+      ease: "Quad.easeOut",
+      onComplete: this.progressReportExited.bind(this),
+      x: 0,
+      y: -(this.menuHeight - this.height),
+    });
+
+    this.progressReportAnimating = true;
+  }
+
+  progressReportEntered() {
+    this.progressReportAnimating = false;
+    this.progressReportShowing = true; //enable click listeners
+    this.progressReportAnimating = false;
+  }
+
+  progressReportExited() {
+    this.progressReport.setVisible(false);
+    this.progressReportAnimating = false;
+    this.progressReportShowing = false;
+    this.progressReportAnimating = false;
+  }
+
   showAbout() {
     console.log("Show about section");
   }
 
   toggleSFX() {
-    console.log("Toggle SFX");
+    model.soundOn = !model.soundOn;
   }
 
   toggleMusic() {

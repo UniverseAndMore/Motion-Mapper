@@ -88,16 +88,7 @@ class HeaderBar extends Phaser.GameObjects.Container {
 
     this.levelNum.setFrame(levNum - 1);
 
-    if (levNum === 1) {
-      this.prevLevelBtn.setVisible(false);
-    } else if (levNum === 2) {
-      //going up
-      this.prevLevelBtn.setVisible(true);
-    } else if (levNum === this.totalLevels) {
-      this.nextLevelBtn.setVisible(false);
-    } else if (levNum === this.totalLevels - 1) {
-      this.nextLevelBtn.setVisible(true);
-    }
+    this.setLevelButtonVisibility(levNum);
 
     if (model.wasLevelAlreadyBeaten(levNum)) {
       this.completionIcon.setVisible(true);
@@ -115,6 +106,19 @@ class HeaderBar extends Phaser.GameObjects.Container {
     });
     this.backBtn.setScale(0.9);
     // this.backBtn.setDepth(13);
+
+    this.sfx = new UIButton({
+      scene: this.scene,
+      key: "icon-sfx",
+      event: "toggle_sfx",
+      toggle: true,
+    });
+    // this.sfx.setOrigin(0, 1);
+    if (!model.soundOn) {
+      this.sfx.toggleBtn();
+    }
+
+    emitter.on("toggle_sfx", this.toggleSFX, this);
 
     this.prevLevelBtn = new UIButton({
       scene: this.scene,
@@ -160,6 +164,7 @@ class HeaderBar extends Phaser.GameObjects.Container {
     // this.settingsBtn.setDepth(13);
 
     this.add(this.backBtn);
+    this.add(this.sfx);
     // this.add(this.infoBtn);
     this.add(this.settingsBtn);
 
@@ -167,6 +172,7 @@ class HeaderBar extends Phaser.GameObjects.Container {
     this.add(this.nextLevelBtn);
 
     this.scaleToFit(this.backBtn, 0.7);
+    this.scaleToFit(this.sfx, 0.64);
     // this.scaleToFit(this.infoBtn, 0.7);
     this.scaleToFit(this.settingsBtn, 0.7);
 
@@ -178,6 +184,12 @@ class HeaderBar extends Phaser.GameObjects.Container {
     this.backBtn.x =
       0.5 * this.backBtn.getWidth() + 0.5 * (1 - percentHeight) * this.height; //for even padding
     this.backBtn.y = 0.5 * this.height;
+
+    this.sfx.x =
+      this.backBtn.x +
+      this.backBtn.getWidth() +
+      0.5 * (1 - percentHeight) * this.height; //for even padding
+    this.sfx.y = 0.5 * this.height;
 
     this.prevLevelBtn.x = 0.42 * this.width;
     this.prevLevelBtn.y = 0.5 * this.height;
@@ -221,6 +233,10 @@ class HeaderBar extends Phaser.GameObjects.Container {
     if (params === "show_settings") {
       this.toggleSettingsMenu();
     }
+  }
+
+  toggleSFX() {
+    model.soundOn = !model.soundOn;
   }
 
   prevLevelPressed() {
@@ -353,8 +369,13 @@ class HeaderBar extends Phaser.GameObjects.Container {
     this.settingsMenu.setVisible(false);
     this.settingsMenuAnimating = false;
     this.settingsMenuShowing = false;
-    this.prevLevelBtn.setVisible(true);
-    this.nextLevelBtn.setVisible(true);
     this.settingsMenuAnimating = false;
+
+    this.setLevelButtonVisibility(this.level);
+  }
+
+  setLevelButtonVisibility(levNum) {
+    this.prevLevelBtn.setVisible(levNum !== 1);
+    this.nextLevelBtn.setVisible(levNum !== this.totalLevels);
   }
 }

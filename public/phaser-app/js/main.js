@@ -7,6 +7,11 @@ var controller;
 var isMobile;
 
 window.onload = function () {
+  Sentry.init({
+    dsn:
+      "https://c08842b9b59e4869b4ec8a599b5ece6c@o425938.ingest.sentry.io/5366875",
+  });
+
   isMobile = navigator.userAgent.indexOf("Mobile");
   if (isMobile == -1) {
     isMobile = navigator.userAgent.indexOf("Tablet");

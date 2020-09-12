@@ -104,13 +104,13 @@ class Model {
     return this._mode;
   }
 
-  set musicOn(val) {
-    this._musicOn = val;
-    emitter.emit(G.MUSIC_CHANGED);
+  set soundOn(val) {
+    this._soundOn = val;
+    emitter.emit(G.SOUND_CHANGED, val);
   }
 
-  get musicOn() {
-    return this._musicOn;
+  get soundOn() {
+    return this._soundOn;
   }
 
   set initialLoadComplete(val) {

@@ -1,6 +1,7 @@
 class Constants {
   constructor() {
     this.SET_GAME_DATA = "setGameData";
+
     this.LEVEL_BEATEN = "levelBeaten";
     this.NEXT_LEVEL_PRESSED = "nextLevelPressed";
     this.PREV_LEVEL_PRESSED = "prevLevelPressed";
@@ -22,6 +23,8 @@ class Constants {
     this.SOUND_CHANGED = "soundChanged";
     this.START_GRAPH_ZAP = "startGraphZap";
     this.STOP_GRAPH_ZAP = "stopGraphZap";
+
+    this.LANGUAGE = "english";
 
     //tutorials
     this.START_TUTORIAL = "startTutorial";

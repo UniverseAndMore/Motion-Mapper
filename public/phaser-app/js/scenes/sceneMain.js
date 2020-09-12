@@ -37,6 +37,17 @@ class SceneMain extends Phaser.Scene {
       .setResolution(2.4);
     loadingText.setOrigin(0.5, 0.5);
 
+    // this.anims.create({
+    //   key: "loading-ring-spin",
+    //   frames: this.anims.generateFrameNumbers("loading-ring"),
+    //   frameRate: 12,
+    //   repeat: -1,
+    // });
+
+    // var loadingRing = this.add.sprite(0, 0, "loading-ring");
+    // loadingRing.setPosition(0.5 * width, 0.7 * height);
+    // loadingRing.play("loading-ring-spin");
+
     this.load.on("progress", function (value) {
       loadingBar.clear();
       loadingBar.fillStyle(0xfbec87, 1);
@@ -54,6 +65,7 @@ class SceneMain extends Phaser.Scene {
       loadingBar.destroy();
       loadingBox.destroy();
       loadingText.destroy();
+      // loadingRing.destroy();
     });
 
     this.load.image("block", "phaser-app/assets/images/block.png");
@@ -100,24 +112,24 @@ class SceneMain extends Phaser.Scene {
     this.load.image("spark", "phaser-app/assets/particles/spark.png"); //spark trail for particles
 
     ////UI
-    this.load.image("icon-back", "phaser-app/assets/images/icon-back.png");
-    this.load.image("icon-info", "phaser-app/assets/images/icon-info.png");
-    this.load.image("icon-gear", "phaser-app/assets/images/icon-gear.png");
+    // this.load.image("icon-back", "phaser-app/assets/images/icon-back.png");
+    // this.load.image("icon-info", "phaser-app/assets/images/icon-info.png");
+    // this.load.image("icon-gear", "phaser-app/assets/images/icon-gear.png");
 
-    this.load.svg("play-btn", "phaser-app/assets/images/play-btn.svg", {
-      scale: 2,
-    });
-    this.load.svg("reset-btn", "phaser-app/assets/images/reset-btn.svg", {
-      scale: 2,
-    });
+    // this.load.svg("play-btn", "phaser-app/assets/images/play-btn.svg", {
+    //   scale: 2,
+    // });
+    // this.load.svg("reset-btn", "phaser-app/assets/images/reset-btn.svg", {
+    //   scale: 2,
+    // });
 
-    this.load.svg(
-      "level-select-btn",
-      "phaser-app/assets/images/level-select-btn.svg",
-      {
-        scale: 2,
-      }
-    );
+    // this.load.svg(
+    //   "level-select-btn",
+    //   "phaser-app/assets/images/level-select-btn.svg",
+    //   {
+    //     scale: 2,
+    //   }
+    // );
 
     this.load.svg("time-panel", "phaser-app/assets/images/time-panel.svg", {
       scale: 2,
