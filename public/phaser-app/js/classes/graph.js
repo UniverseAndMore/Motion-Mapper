@@ -149,6 +149,8 @@ class Graph extends Phaser.GameObjects.Container {
   }
 
   clearGraphLine() {
+    model.addToTotalTimeSpentGraphing(this.timeElapsed);
+
     if (this.lineGraphicsGroup) {
       this.lineGraphicsGroup.clear(true, true);
     }

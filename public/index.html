@@ -106,6 +106,133 @@
   </head>
 
   <body>
+    <div class="progress-report">
+      <div class="progress-report-title">
+        <span class="progress-report-title-section">Progress Report:</span>
+        <span
+          class="progress-report-title-section progress-report-title-section-2"
+          >Motion Mapper</span
+        >
+      </div>
+      <form id="name-form">
+        <input
+          type="text"
+          id="fname"
+          name="name"
+          placeholder="Enter your name"
+          value=""
+        />
+        <button
+          type="submit"
+          class="name-submit-btn"
+          id="name-submit-btn"
+          value="Enter"
+        >
+          Enter<br />(cannot undo)
+        </button>
+      </form>
+      <div class="graphing-time">
+        <div>Total graphing time:</div>
+        <div id="time-minutes">0</div>
+        <div class="units">min</div>
+        <div id="time-seconds">0</div>
+        <div class="units">sec</div>
+      </div>
+      <div class="mode-completion">
+        <div class="mode-heading">Control Mode: Position-vs-time</div>
+        <div class="mode-completion-sub-group">
+          <div class="mode-completion-sub">
+            <div class="mode-subheading">Horizontal:</div>
+            <div class="mode-completion-info">
+              <div id="control-x-h"></div>
+              <i class="fas fa-bullseye"></i>
+            </div>
+            <!-- <img target> -->
+          </div>
+          <div class="mode-completion-sub">
+            <div class="mode-subheading mode-subheading-2">Vertical:</div>
+            <div class="mode-completion-info">
+              <div id="control-x-v"></div>
+              <i class="fas fa-bullseye"></i>
+            </div>
+            <!-- <img target> -->
+          </div>
+        </div>
+      </div>
+      <div class="mode-completion">
+        <div class="mode-heading">Control Mode: Velocity-vs-time</div>
+        <div class="mode-completion-sub-group">
+          <div class="mode-completion-sub">
+            <div class="mode-subheading">Horizontal:</div>
+            <div class="mode-completion-info">
+              <div id="control-v-h"></div>
+              <i class="fas fa-bullseye"></i>
+            </div>
+            <!-- <img target> -->
+          </div>
+          <div class="mode-completion-sub">
+            <div class="mode-subheading mode-subheading-2">Vertical:</div>
+            <div class="mode-completion-info">
+              <div id="control-v-v"></div>
+              <i class="fas fa-bullseye"></i>
+            </div>
+            <!-- <img target> -->
+          </div>
+        </div>
+      </div>
+      <div class="mode-completion">
+        <div class="mode-heading">Input Mode: Position-vs-time</div>
+        <div class="mode-completion-sub-group">
+          <div class="mode-completion-sub">
+            <div class="mode-subheading">Set v:</div>
+            <div class="mode-completion-info">
+              <div id="input-x-v"></div>
+              <i class="fas fa-bullseye"></i>
+            </div>
+            <!-- <img target> -->
+          </div>
+          <div class="mode-completion-sub">
+            <div class="mode-subheading mode-subheading-2">Set a:</div>
+            <div class="mode-completion-info">
+              <div id="input-x-a"></div>
+              <i class="fas fa-bullseye"></i>
+            </div>
+            <!-- <img target> -->
+          </div>
+        </div>
+      </div>
+      <div class="mode-completion">
+        <div class="mode-heading">Input Mode: Velocity-vs-time</div>
+        <div class="mode-completion-sub-group">
+          <div class="mode-completion-sub">
+            <div class="mode-subheading">Set v:</div>
+            <div class="mode-completion-info">
+              <div id="input-v-v"></div>
+              <i class="fas fa-bullseye"></i>
+            </div>
+            <!-- <img target> -->
+          </div>
+          <div class="mode-completion-sub">
+            <div class="mode-subheading mode-subheading-2">Set a:</div>
+            <div class="mode-completion-info">
+              <div id="input-v-a"></div>
+              <i class="fas fa-bullseye"></i>
+            </div>
+            <!-- <img target> -->
+          </div>
+        </div>
+      </div>
+      <div class="grand-total">
+        Grand total:
+        <div id="total-beaten"></div>
+        <i class="fas fa-bullseye fa-bullseye-end"></i>
+      </div>
+      <div id="exit-button">
+        <div class="exit-button-bar-1">
+          <div class="exit-button-bar-2"></div>
+        </div>
+      </div>
+    </div>
     <img
       src="./assets/images/header-stars.svg"
       alt="stars"
@@ -149,6 +276,12 @@
         class="game-border game-border-top"
       />
       <div id="game-container">
+        <div class="buttons">
+          <!-- <div class="info-button" id="help-button">How do I play?</div> -->
+          <div class="info-button" id="progress-button">
+            Progress report<i class="fas fa-clipboard"></i>
+          </div>
+        </div>
         <div id="phaser-game"></div>
         <div alt="go full screen" id="fullscreen-btn">Full screen</div>
       </div>

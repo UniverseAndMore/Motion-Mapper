@@ -1,6 +1,8 @@
 class Model {
   constructor() {
     this._progressData = this.loadLocalData() || {
+      totalTime: 0,
+      userName: "",
       modes: {
         control: {
           worldData: [
@@ -50,6 +52,8 @@ class Model {
     this._mode = "control";
     this._soundOn = true;
     this._musicOn = true;
+    this._totalTime = this._progressData.totalTime;
+    this._userName = this._progressData.userName;
   }
 
   loadLocalData() {
@@ -77,6 +81,36 @@ class Model {
   levelsBeatenForWorld(worldNum) {
     return this._progressData.modes[this._mode].worldData[worldNum - 1]
       .levelsBeaten;
+  }
+
+  numLevelsBeatenForControlWorld(worldNum) {
+    return this._progressData.modes["control"].worldData[worldNum - 1]
+      .levelsBeaten.length;
+  }
+
+  numLevelsBeatenForInputWorld(worldNum) {
+    return this._progressData.modes["input"].worldData[worldNum - 1]
+      .levelsBeaten.length;
+  }
+
+  addToTotalTimeSpentGraphing(additional) {
+    this._totalTime += additional;
+    this._progressData.totalTime = this._totalTime;
+    this.saveLocalData();
+  }
+
+  totalTimeSpentGraphing() {
+    return this._totalTime ? this._totalTime : 0;
+  }
+
+  setUserName(name) {
+    this._userName = name;
+    this._progressData.userName = this._userName;
+    this.saveLocalData();
+  }
+
+  getUserName() {
+    return this._userName;
   }
 
   wasLevelAlreadyBeaten(levelNum) {

@@ -23,7 +23,6 @@ class Constants {
     this.SOUND_CHANGED = "soundChanged";
     this.START_GRAPH_ZAP = "startGraphZap";
     this.STOP_GRAPH_ZAP = "stopGraphZap";
-
     this.LANGUAGE = "english";
 
     //tutorials

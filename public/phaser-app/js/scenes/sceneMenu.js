@@ -166,7 +166,6 @@ class SceneMenu extends Phaser.Scene {
 
     emitter = new Phaser.Events.EventEmitter();
     emitter.on("start_world", this.startLevel, this);
-    emitter.on("show_about", this.showAbout, this);
     // emitter.on("toggle_music", this.toggleMusic, this);
     emitter.on("toggle_sfx", this.toggleSFX, this);
     emitter.on("set_mode", this.setMode, this);
@@ -312,22 +311,11 @@ class SceneMenu extends Phaser.Scene {
       event: "toggle_sfx",
       toggle: true,
     });
-    this.sfx.setOrigin(0, 0);
+    this.sfx.setOrigin(0, 1);
 
     if (!model.soundOn) {
       this.sfx.toggleBtn();
     }
-
-    this.progressBtn = new UIButton({
-      scene: this,
-      key: "clipboard",
-      event: "open_progress",
-      toggle: false,
-    });
-    this.progressBtn.setOrigin(0, 0);
-
-    this.progressReport = null;
-    emitter.on("open_progress", this.openProgressReport, this);
   }
 
   setLayoutConstants() {
@@ -438,20 +426,8 @@ class SceneMenu extends Phaser.Scene {
     this.inputModeBtn.scaleY = this.inputModeBtn.scaleX;
 
     this.sfx.x = 0.025 * game.config.width;
-    this.sfx.y = 0.035 * game.config.height;
+    this.sfx.y = 0.975 * game.config.height;
     this.sfx.scale = this.bottomBtnScale;
-
-    this.progressBtn.scale = 0.85 * this.bottomBtnScale;
-
-    if (this.isLandscape) {
-      this.progressBtn.x =
-        game.config.width - 1.6 * this.progressBtn.getWidth();
-      this.progressBtn.y = 0.3 * this.progressBtn.getHeight();
-    } else {
-      this.progressBtn.x =
-        game.config.width - 1.4 * this.progressBtn.getWidth();
-      this.progressBtn.y = 0.4 * this.progressBtn.getHeight();
-    }
   }
 
   positionAndScaleLevelInfo() {
@@ -537,74 +513,6 @@ class SceneMenu extends Phaser.Scene {
     model.activeWorld = levelInfo.world;
 
     this.scene.start("SceneMain");
-  }
-
-  openProgressReport() {
-    // if (this.progressReport === null) {
-    //   this.progressReport = new ProgressReport({
-    //     scene: this,
-    //     emitter: emitter,
-    //     width: game.config.width,
-    //     height: game.config.height,
-    //     portraitMode: this.isPortrait,
-    //   });
-    //   this.add(this.progressReport);
-    //   this.progressReport.y = -0.2 * game.config.height;
-    // }
-  }
-
-  toggleProgressReport() {
-    if (this.progressReportAnimating) return;
-    this.progressReportAnimating = true;
-    if (!this.progressReportShowing) {
-      this.showProgressReport();
-    } else this.hideProgressReport();
-  }
-
-  showProgressReport() {
-    // this.emitter.emit(G.PAUSE_GAME);
-    this.progressReport.setVisible(true);
-    this.scene.tweens.add({
-      targets: this.progressReport,
-      paused: false,
-      duration: 200,
-      ease: "Quad.easeOut",
-      onComplete: this.progressReportEntered.bind(this),
-      y: 0,
-    });
-
-    this.progressReportAnimating = true;
-  }
-
-  hideProgressReport() {
-    this.scene.tweens.add({
-      targets: this.progressReport,
-      paused: false,
-      duration: 300,
-      ease: "Quad.easeOut",
-      onComplete: this.progressReportExited.bind(this),
-      x: 0,
-      y: -(this.menuHeight - this.height),
-    });
-
-    this.progressReportAnimating = true;
-  }
-
-  progressReportEntered() {
-    this.progressReportAnimating = false;
-    this.progressReportShowing = true; //enable click listeners
-    this.progressReportAnimating = false;
-  }
-
-  progressReportExited() {
-    this.progressReport.setVisible(false);
-    this.progressReportAnimating = false;
-    this.progressReportShowing = false;
-    this.progressReportAnimating = false;
-  }
-
-  showAbout() {
-    console.log("Show about section");
   }
 
   toggleSFX() {
