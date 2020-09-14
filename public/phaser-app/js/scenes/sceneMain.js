@@ -1,3 +1,5 @@
+var loadingBar, loadingBox, loadingText;
+
 class SceneMain extends Phaser.Scene {
   constructor() {
     super("SceneMain");
@@ -14,8 +16,8 @@ class SceneMain extends Phaser.Scene {
 
     const barHeightRatio = 0.9; //what portion of the height of the box does the loading bar take up?
 
-    var loadingBox = this.add.graphics();
-    var loadingBar = this.add.graphics();
+    loadingBox = this.add.graphics();
+    loadingBar = this.add.graphics();
     loadingBox.fillStyle(0xffffff, 1);
     loadingBox.fillRect(
       0.5 * (width - boxWidth),
@@ -24,7 +26,7 @@ class SceneMain extends Phaser.Scene {
       boxHeight
     );
 
-    var loadingText = this.make
+    loadingText = this.make
       .text({
         x: width / 2,
         y: height / 2 - 1 * boxHeight,
@@ -62,9 +64,6 @@ class SceneMain extends Phaser.Scene {
     this.load.on("fileprogress", function (file) {});
 
     this.load.on("complete", function () {
-      loadingBar.destroy();
-      loadingBox.destroy();
-      loadingText.destroy();
       // loadingRing.destroy();
     });
 
@@ -228,6 +227,10 @@ class SceneMain extends Phaser.Scene {
   }
 
   create() {
+    loadingBar.destroy();
+    loadingBox.destroy();
+    loadingText.destroy();
+
     this.mode = model.mode;
     this.activeWorld = model.activeWorld;
 

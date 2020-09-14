@@ -92,7 +92,7 @@ class BoxGuy extends Phaser.GameObjects.Container {
     }
 
     this.box = this.matter.add
-      .image(this.startingPos.x, this.startingPos.y, "block", null, {
+      .sprite(this.startingPos.x, this.startingPos.y, "block", null, {
         chamfer: { radius: 24 },
       })
       .setBounce(0.8)
