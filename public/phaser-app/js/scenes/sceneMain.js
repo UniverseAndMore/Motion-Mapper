@@ -737,9 +737,11 @@ class SceneMain extends Phaser.Scene {
   update(time, delta) {
     if (this.gamePaused) return;
 
-    const slowGameFactor = game.loop.actualFps / 60;
-
-    this.lastDelta = delta * slowGameFactor;
+	const slowGameFactor = game.loop.actualFps / 60;
+	let baseDelta = 1000 / 60;
+	//let modifiedDelta = delta > baseDelta ? baseDelta : delta;
+    // this.lastDelta = delta * slowGameFactor;
+	this.lastDelta = baseDelta;
 
     /////// CONTROL MODE ONLY
     if (this.mode === "control") {
@@ -755,7 +757,8 @@ class SceneMain extends Phaser.Scene {
       } else if (this.cursors.down.isDown) {
         this.matter.world.engine.world.gravity.y = 2 / this.timeFactor;
       } else {
-        this.matter.world.engine.world.gravity.y = slowGameFactor;
+        this.matter.world.engine.world.gravity.y = 1;
+        //this.matter.world.engine.world.gravity.y = slowGameFactor;
       }
 
       if (this.axisOrient === "horizontal") {

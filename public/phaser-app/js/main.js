@@ -167,6 +167,10 @@ createNewGame = function (
       physics: {
         default: "matter",
         matter: {
+			// to avoid bugs with dynamic delta we use static steps for physics engine update, this one also infuence scene update delta
+			runner: {
+				isFixed: true
+			}
           // debug: true,
           // debugBodyColor: 0xffffff,
         },
@@ -202,6 +206,9 @@ createNewGame = function (
       physics: {
         default: "matter",
         matter: {
+			runner: {
+				isFixed: true
+			}
           // debug: true,
           // debugBodyColor: 0xffffff,
         },
