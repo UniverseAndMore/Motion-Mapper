@@ -99,7 +99,6 @@ class SliderBar extends Phaser.GameObjects.Container {
         }
       )
       .setOrigin(0.5, 1)
-      .setResolution(2);
 
     this.add(this.textLabel);
   }

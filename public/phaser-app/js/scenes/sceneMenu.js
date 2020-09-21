@@ -38,7 +38,6 @@ class SceneMenu extends Phaser.Scene {
             fill: "#f9f9f9",
           },
         })
-        .setResolution(2.4);
       loadingText.setOrigin(0.5, 0.5);
 
       this.load.on("progress", function (value) {

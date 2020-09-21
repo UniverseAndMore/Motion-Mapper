@@ -161,7 +161,6 @@ class SelectorPanel extends Phaser.GameObjects.Container {
         fontSize: 60,
         color: headingColor,
       })
-      .setResolution(1.1);
 
     this.panelText.setOrigin(0, 0.5);
     this.add(this.panelText);
@@ -418,7 +417,6 @@ class SelectorPanel extends Phaser.GameObjects.Container {
         fontSize: 60,
         color: textColor,
       })
-      .setResolution(1.1);
 
     if (this.centerOnZero) {
       if (this.currentVal === index - this.maxVal) {

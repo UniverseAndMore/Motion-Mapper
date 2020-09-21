@@ -161,7 +161,7 @@ createNewGame = function (
   if (isMobile == -1 || innerWidth > innerHeight) {
     //DESKTOP
     var config = {
-      type: Phaser.AUTO,
+      type: Phaser.CANVAS,
       width: 1000,
       height: 700,
       physics: {
@@ -199,7 +199,7 @@ createNewGame = function (
     }
 
     var config = {
-      type: Phaser.AUTO,
+      type: Phaser.CANVAS,
       width: gameWidth,
       height: gameHeight,
       parent: "phaser-game",

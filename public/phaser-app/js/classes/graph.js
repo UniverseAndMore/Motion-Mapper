@@ -89,7 +89,7 @@ class Graph extends Phaser.GameObjects.Container {
   }
 
   drawGridLines() {
-    //////VERTICAL GRID LINES
+	//////VERTICAL GRID LINES
     this.gridLinesVert = this.scene.add.graphics();
     this.gridLinesVert.lineStyle(2, 0xe8e8e8);
 
@@ -191,7 +191,9 @@ class Graph extends Phaser.GameObjects.Container {
       this.axes.lineTo(this.paddingLeft, yOrigin);
       this.axes.lineTo(this.width - this.paddingRight, yOrigin);
       this.axes.lineTo(this.paddingLeft, yOrigin);
-    }
+	}
+	
+	this.axes.strokePath();
 
     this.add(this.axes);
 
@@ -365,6 +367,7 @@ class Graph extends Phaser.GameObjects.Container {
   }
 
   createTimingBar() {
+	  //TODO: performance issue - no sense to use Graphics. Much better to use simple texture and create sprite with needed size.
     this.timingBar = this.scene.add
       .graphics()
       .lineStyle(8, 0xf3775b)

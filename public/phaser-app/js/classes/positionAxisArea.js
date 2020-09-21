@@ -91,7 +91,7 @@ class PositionAxisArea extends Phaser.GameObjects.Container {
         this.paddingLeft - this.axisRemainderBeginning,
         this.height - this.vertOrigin
       );
-    }
+	}
     this.axis.strokePath();
 
     //AXIS ARROWHEAD
@@ -168,8 +168,7 @@ class PositionAxisArea extends Phaser.GameObjects.Container {
         fontFamily: "sans-serif",
         fontSize: fontSize,
         color: this.axisColorCSS,
-      })
-      .setResolution(1.5);
+      });
 
     if (this.axisOrient === "vertical") {
       this.heading.setOrigin(0.7, 1.2);
@@ -209,7 +208,6 @@ class PositionAxisArea extends Phaser.GameObjects.Container {
       else label.setOrigin(0.5, 0);
       this.axisLabels.push(label);
       this.add(label);
-      label.setResolution(2.5);
     }
   }
   // createHorizontalRule() {
