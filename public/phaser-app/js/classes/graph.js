@@ -82,9 +82,9 @@ class Graph extends Phaser.GameObjects.Container {
   }
 
   drawBackground() {
-    this.bg = this.scene.add.graphics({ fillStyle: { color: 0xf4f4f4 } });
-    const rect = new Phaser.Geom.Rectangle(0, 0, this.width, this.height);
-    this.bg.fillRectShape(rect);
+	TextureHelpers.createRectTexture(this.scene, "graph-bg", 0xf4f4f4);
+	this.bg = this.scene.add.image(0, 0, "graph-bg").setOrigin(0);
+	this.bg.setDisplaySize(this.width, this.height);
     this.add(this.bg);
   }
 
@@ -142,7 +142,8 @@ class Graph extends Phaser.GameObjects.Container {
     this.line.clear();
     this.line.fillStyle(0xfaeb86);
     this.line.fillRectShape(lineseg);
-    this.line.generateTexture("segment-lit", 8, 8);
+	this.line.generateTexture("segment-lit", 8, 8);
+	this.line.destroy();
 
     this.lineGraphicsGroup = this.scene.add.group();
     this.lineGraphicsGroup.setDepth(10);

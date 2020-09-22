@@ -66,9 +66,9 @@ class PositionAxisArea extends Phaser.GameObjects.Container {
   }
 
   drawBackground() {
-    this.bg = this.scene.add.graphics({ fillStyle: { color: this.bgColor } });
-    const rect = new Phaser.Geom.Rectangle(0, 0, this.width, this.height);
-    this.bg.fillRectShape(rect);
+	TextureHelpers.createRectTexture(this.scene, "position-axis-area-bg", this.bgColor);
+	this.bg = this.scene.add.image(0, 0, "position-axis-area-bg").setOrigin(0);
+	this.bg.setDisplaySize(this.width, this.height);
     this.add(this.bg);
   }
 

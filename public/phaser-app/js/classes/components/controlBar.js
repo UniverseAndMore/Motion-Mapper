@@ -17,10 +17,10 @@ class ControlBar extends Phaser.GameObjects.Container {
     this.portraitMode = config.portraitMode;
 
     this.width = config.width;
-    this.height = this.portraitMode ? 1.5 * config.height : config.height;
-
-    this.bgColor = 0xfcf3ca; //light yellow
-    this.strokeColor = 0x2c3234; //space gray
+	this.height = this.portraitMode ? 1.5 * config.height : config.height;
+	
+	this.bgColor = 0xfcf3ca; //light yellow
+	this.strokeColor = 0x2c3234; //space gray
 
     this.graphPlaying = false;
 
@@ -55,22 +55,15 @@ class ControlBar extends Phaser.GameObjects.Container {
   }
 
   drawBackground() {
-    this.bg = this.scene.add.graphics({ fillStyle: { color: this.bgColor } });
-    const rect = new Phaser.Geom.Rectangle(
-      this.x0,
-      this.y0,
-      this.width,
-      this.height
-    );
-    this.bg.fillRectShape(rect);
+	TextureHelpers.createRectTexture(this.scene, "control-bar-bg", this.bgColor);
+	this.bg = this.scene.add.image(this.x0, this.y0, "control-bar-bg").setOrigin(0);
+	this.bg.setDisplaySize(this.width, this.height);
 
-    this.bg.lineStyle(3, this.strokeColor);
-    this.bg.beginPath();
-    this.bg.moveTo(this.x0, this.y0);
-    this.bg.lineTo(this.x0 + this.width, this.y0);
-    this.bg.strokePath();
+	TextureHelpers.createRectTexture(this.scene, "control-bar-outline", this.strokeColor);
+	this.bgOutline = this.scene.add.image(this.x0, this.y0, "control-bar-outline").setOrigin(0);
+	this.bgOutline.setDisplaySize(this.width, 3);
 
-    this.add(this.bg);
+    this.add([this.bg, this.bgOutline]);
   }
 
   createPlayButton() {

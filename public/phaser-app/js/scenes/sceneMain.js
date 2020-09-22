@@ -64,51 +64,48 @@ class SceneMain extends Phaser.Scene {
 
     this.load.on("complete", function () {
       // loadingRing.destroy();
-    });
+	});
+	
+	this.load.setPath("phaser-app/assets/");
 
-    this.load.image("block", "phaser-app/assets/images/block.png");
-    this.load.image("block-smile", "phaser-app/assets/images/block-smile.png");
-    this.load.image(
-      "velocity-vector-body",
-      "phaser-app/assets/images/velocity-vector-body.png"
-    );
-    this.load.image(
-      "velocity-vector-head",
-      "phaser-app/assets/images/velocity-vector-head.png"
-    );
-    this.load.image("vx-label", "phaser-app/assets/images/vx-label.png");
-    this.load.image("vy-label", "phaser-app/assets/images/vy-label.png");
-    this.load.image(
-      "acceleration-vector-body",
-      "phaser-app/assets/images/acceleration-vector-body.png"
-    );
-    this.load.image(
-      "acceleration-vector-head",
-      "phaser-app/assets/images/acceleration-vector-head.png"
-    );
-    this.load.image("ax-label", "phaser-app/assets/images/ax-label.png");
-    this.load.image("ay-label", "phaser-app/assets/images/ay-label.png");
-    this.load.image(
-      "bar-back",
-      "phaser-app/assets/images/progress-bar-back.png"
-    );
-    this.load.image(
-      "bar-bot",
-      "phaser-app/assets/images/progress-bar-bottom.png"
-    );
-    this.load.image(
-      "bar-mid",
-      "phaser-app/assets/images/progress-bar-middle.png"
-    );
-    this.load.image("bar-top", "phaser-app/assets/images/progress-bar-top.png");
-    this.load.image("bar-lit", "phaser-app/assets/images/progress-bar-lit.png");
-    this.load.image(
-      "bar-glow",
-      "phaser-app/assets/images/progress-bar-glow.png"
-    );
-    this.load.image("graph-spark", "phaser-app/assets/images/graph-spark.png");
-    this.load.image("spark", "phaser-app/assets/particles/spark.png"); //spark trail for particles
+	// IMAGES
+	this.load.image("acceleration-vector-body", "images/acceleration-vector-body.png");
+	this.load.image("acceleration-vector-head", "images/acceleration-vector-head.png");
+    this.load.image("velocity-vector-body",     "images/velocity-vector-body.png");
+    this.load.image("velocity-vector-head",     "images/velocity-vector-head.png");
+	
+    this.load.image("block",       "images/block.png");
+    this.load.image("block-smile", "images/block-smile.png");
+    this.load.image("vx-label",    "images/vx-label.png");
+	this.load.image("vy-label",    "images/vy-label.png");
+	this.load.image("ax-label",    "images/ax-label.png");
+    this.load.image("ay-label",    "images/ay-label.png");
+    this.load.image("bar-back",    "images/progress-bar-back.png");
+    this.load.image("bar-bot",     "images/progress-bar-bottom.png");
+    this.load.image("bar-mid",     "images/progress-bar-middle.png");
+    this.load.image("bar-top",     "images/progress-bar-top.png");
+    this.load.image("bar-lit",     "images/progress-bar-lit.png");
+    this.load.image("bar-glow",    "images/progress-bar-glow.png");
+    this.load.image("graph-spark", "images/graph-spark.png");
+	this.load.image("spark",       "particles/spark.png"); //spark trail for particles
 
+	// SVG
+	this.load.svg("initial-velocity-panel-border", "images/initial-velocity-panel-border.svg", { scale: 2 });
+	this.load.svg("acceleration-panel-border",     "images/acceleration-panel-border.svg",     { scale: 2 });
+
+	this.load.svg("time-panel",             "images/time-panel.svg",             { scale: 2 });
+	this.load.svg("time-panel-border",      "images/time-panel-border.svg",      { scale: 2 });
+    this.load.svg("velocity-panel",         "images/velocity-panel.svg",         { scale: 2 });
+	this.load.svg("velocity-panel-border",  "images/velocity-panel-border.svg",  { scale: 2 });
+    this.load.svg("initial-velocity-panel", "images/initial-velocity-panel.svg", { scale: 2 });
+    this.load.svg("acceleration-panel",     "images/acceleration-panel.svg",     { scale: 2 });
+	this.load.svg("completion-outline",     "images/completion-outline.svg",     { scale: 2 });
+    this.load.svg("completion-target",      "images/completion-target.svg",      { scale: 2 });
+	
+	// SPRITESHEETS
+	this.load.spritesheet("block-blink", "images/block-blink-spritesheet.png", { frameWidth: 130, frameHeight: 130 });
+    this.load.spritesheet("level-nums",  "images/level-nums-spritesheet.png",  { frameWidth: 192, frameHeight: 100 });
+  
     ////UI
     // this.load.image("icon-back", "phaser-app/assets/images/icon-back.png");
     // this.load.image("icon-info", "phaser-app/assets/images/icon-info.png");
@@ -129,98 +126,16 @@ class SceneMain extends Phaser.Scene {
     //   }
     // );
 
-    this.load.svg("time-panel", "phaser-app/assets/images/time-panel.svg", {
-      scale: 2,
-    });
-    this.load.svg(
-      "time-panel-border",
-      "phaser-app/assets/images/time-panel-border.svg",
-      {
-        scale: 2,
-      }
-    );
+    //AUDIO
+    this.load.audio("level-win",   "sounds/level-win.mp3");
+    this.load.audio("bump1",       "sounds/bump1.mp3");
+    this.load.audio("bump2",       "sounds/bump2.mp3");
+    this.load.audio("bump3",       "sounds/bump3.mp3");
+    this.load.audio("graph-zap",   "sounds/graph-zap.mp3");
+    this.load.audio("button-down", "sounds/button-down.mp3");
+    this.load.audio("button-up",   "sounds/button-up.mp3");
 
-    this.load.svg(
-      "velocity-panel",
-      "phaser-app/assets/images/velocity-panel.svg",
-      {
-        scale: 2,
-      }
-    );
-    this.load.svg(
-      "velocity-panel-border",
-      "phaser-app/assets/images/velocity-panel-border.svg",
-      {
-        scale: 2,
-      }
-    );
-
-    this.load.svg(
-      "initial-velocity-panel",
-      "phaser-app/assets/images/initial-velocity-panel.svg",
-      {
-        scale: 2,
-      }
-    );
-    this.load.svg(
-      "initial-velocity-panel-border",
-      "phaser-app/assets/images/initial-velocity-panel-border.svg",
-      {
-        scale: 2,
-      }
-    );
-
-    this.load.svg(
-      "acceleration-panel",
-      "phaser-app/assets/images/acceleration-panel.svg",
-      {
-        scale: 2,
-      }
-    );
-    this.load.svg(
-      "acceleration-panel-border",
-      "phaser-app/assets/images/acceleration-panel-border.svg",
-      {
-        scale: 2,
-      }
-    );
-
-    this.load.spritesheet(
-      "block-blink",
-      "phaser-app/assets/images/block-blink-spritesheet.png",
-      { frameWidth: 130, frameHeight: 130 }
-    );
-
-    this.load.spritesheet(
-      "level-nums",
-      "phaser-app/assets/images/level-nums-spritesheet.png",
-      { frameWidth: 192, frameHeight: 100 }
-    );
-
-    this.load.svg(
-      "completion-outline",
-      "phaser-app/assets/images/completion-outline.svg",
-      {
-        scale: 2,
-      }
-    );
-
-    this.load.svg(
-      "completion-target",
-      "phaser-app/assets/images/completion-target.svg",
-      {
-        scale: 2,
-      }
-    );
-
-    //////AUDIO
-    this.load.audio("level-win", "phaser-app/assets/sounds/level-win.mp3");
-    this.load.audio("bump1", "phaser-app/assets/sounds/bump1.mp3");
-    this.load.audio("bump2", "phaser-app/assets/sounds/bump2.mp3");
-    this.load.audio("bump3", "phaser-app/assets/sounds/bump3.mp3");
-    this.load.audio("graph-zap", "phaser-app/assets/sounds/graph-zap.mp3");
-    this.load.audio("button-down", "phaser-app/assets/sounds/button-down.mp3");
-    this.load.audio("button-up", "phaser-app/assets/sounds/button-up.mp3");
+	this.load.setPath();
 
     this.load.json("level-data", "phaser-app/data/gameData.json");
   }

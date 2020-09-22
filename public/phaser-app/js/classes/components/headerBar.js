@@ -12,9 +12,9 @@ class HeaderBar extends Phaser.GameObjects.Container {
     this.mode = config.mode;
 
     this.menuWidth = config.menuWidth;
-    this.menuHeight = config.menuHeight;
-
-    this.bgColor = 0x2c3234; //space gray
+	this.menuHeight = config.menuHeight;
+	
+	this.bgColor = 0x2c3234; //space gray
 
     this.level = config.levNum;
     this.totalLevels = config.totalLevels;
@@ -46,9 +46,10 @@ class HeaderBar extends Phaser.GameObjects.Container {
   }
 
   drawBackground() {
-    this.bg = this.scene.add.graphics({ fillStyle: { color: this.bgColor } });
-    const rect = new Phaser.Geom.Rectangle(0, 0, this.width, this.height);
-    this.bg.fillRectShape(rect);
+	TextureHelpers.createRectTexture(this.scene, "header-bar-bg", this.bgColor);
+
+	this.bg = this.scene.add.image(0, 0, "header-bar-bg").setOrigin(0);
+	this.bg.setDisplaySize(this.width, this.height);
     this.add(this.bg);
   }
 
